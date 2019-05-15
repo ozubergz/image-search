@@ -1,0 +1,47 @@
+<!-- This is static file  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Search</title>
+    <meta name="ozubergz" content="API search">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">  <!-- import the webpage's stylesheet -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="/client.js" defer></script> <!-- import the webpage's client-side javascript file -->
+  </head>
+  <body>
+    <h1 class="heading">API IMAGE SEARCH</h1>
+    <div class="wrapper">
+      <h2>Description</h2>
+      <p>This is an API service that can search images
+        that are related to a given search word which you provide.
+        Search results output is in JSON format.
+      </p>
+      <h2>Example API calls</h2>
+      <p><span class="highlight">https://img-abstract.glitch.me/api/search/cat?offset=6</span></p>
+      <p>serve routes:  <span class="highlight">search/(:word)</span> and <span class="highlight">?offset=(number)</span></p>
+      <p>Offset number is the page of the results. Providing offset number is optional. 
+        If offset is not provided, default value is 1.
+      </p>
+      <h2>Example Results</h2>
+      <p>[{ "url": "https://thumbs-prod.si-cdn.com/DPk5aepMhVEqEcK31HURL5qONyY=/800x600/filters:no_upscale()
+        /https://public-media.si-cdn.com/filer/76/f7/76f7d30a-3fec-4f36-af9c-0ec9ab2ab891/kitty_tongue.jpg",
+        <br/>
+        "snippet": "Your Cat's Tongue Is a Rough, Pink Engineering Marvel | Smart News ...",
+        <br/>
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST47zDSLYOJ20PeDYkB11HwvxF0Wr24ku4xXQgFM56rbtJcKTFDun02UM",
+        <br/>
+        "context": "https://www.smithsonianmag.com/smart-news/your-cats-tongue-masterpiece-design-180970859/"
+        },
+        <br/>
+        ........   9 more search results ]
+      </p>
+      <h2>Get latest history</h2>
+      <p>API also provides history search, but it only provides 10 most recent searches.</p>
+      <p>Call API history search:  <span class="highlight">https://img-abstract.glitch.me/api/latest/search/</span>
+      </p>
+    </div>
+  </body>
+</html>
